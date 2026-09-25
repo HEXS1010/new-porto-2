@@ -1,0 +1,32 @@
+# Dokumentasi lokal OpenCode — jangan ikut pushed ke GitHub
+OPENCODE.md
+
+# Environment dan secret
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Konfigurasi lokal tambahan
+*.local.php
+*.local.js
+
+# Database dump/lokal
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Log
+*.log
+
+# Dependency dan cache
+node_modules/
+vendor/
+
+# Editor/system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

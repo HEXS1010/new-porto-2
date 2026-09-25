@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icont -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(TextPlugin, ScrollTrigger);
+      });
+    </script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+    </script>
+  </head>
+  <body>
+    <!-- loading animasi -->
+    <!-- <div id="loadingScreen">
+      <div id="loadingNumber">0%</div>
+
+      <div id="firstAnim">
+        <div class="jello-wrap">
+          <img src="img/logo versi 2.png" id="logo" />
+          <div id="jelloText">
+            <div id="hexs" class="word">HEXS</div>
+            <div id="project" class="word">PROJECT</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="secondAnim">
+        <div id="welcomeText">SELAMAT DATANG DI PORTOFOLIO SAYA</div>
+      </div>
+    </div> -->
+
+    <!-- loading animasi -->
+    <div id="loadingScreen">
+      <div id="loadingNumber">0%</div>
+
+      <!-- Container pertama: logo + HEXS PROJECT -->
+      <div id="firstAnim">
+        <div class="shine-wrap">
+          <img src="img/logo versi 2.png" id="logoShine" />
+
+          <div id="jelloTextShine">
+            <div id="hexs" class="word">HEXS</div>
+            <div id="project" class="word">PROJECT</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container kedua: selamat datang -->
+      <div id="secondAnim">
+        <div id="welcomeText">SELAMAT DATANG DI PORTOFOLIO SAYA</div>
+      </div>
+    </div>
+
+    <!-- bg bintang mulai-->
+    <div class="starfield" aria-hidden="true"></div>
+    <!-- bg bintang akhir -->
+
+    <!-- navbar awal -->
+    <nav>
+      <div class="logo">MY <span>PORTFOLIO</span></div>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu">
+        <a href="#awal">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#story">Story</a>
+        <a href="#foto">Gallery</a>
+        <a href="#komentar">Comment</a>
+        <a href="#kontak">Contact</a>
+      </div>
+    </nav>
+    <!-- navbar akhir -->
+
+    <!-- home mulai -->
+    <main>
+      <section class="hero" id="awal">
+        <div class="intro">
+          <div class="eyebrow">Hello World, I'm <span>Aswameda</span> 👋</div>
+          <h1 id="roleText"></h1>
+          <p class="lead">
+            seorang pelajar dan penjelajah teknologi dimana saya mencoba
+            <span>Desain web</span> dan <span>Cybersecurity</span>
+          </p>
+          <div class="audio-player" id="audioPlayer">
+            <button class="play-btn" id="playBtn" aria-label="Play/Pause">
+              <i class="fa-solid fa-play" id="playIcon"></i>
+            </button>
+
+            <div class="bars" id="bars">
+              <!-- akan diisi oleh JS -->
+            </div>
+            <!-- home akhir -->
+
+            <!-- audio mulai -->
+            <audio
+              id="audioEl"
+              src="audio/DJ Dora Dora Breakbeat Slowed Reverb Let's Fly with Omchyy.mp3"
+              crossorigin="anonymous"
+            ></audio>
+          </div>
+          <!-- audio akhir -->
+
+          <!-- sosial media mulai -->
+          <div class="socials">
+            <a class="chip" href="#" target="_blank"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a
+              class="chip"
+              href="https://www.instagram.com/swameda.k?igsh=aTB3bXNlMzk0dWVm"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              class="chip"
+              href="https://www.tiktok.com/@logar1230?_r=1&_t=ZS-91FZpOlKbKP"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+            <a class="chip" href="https://github.com/HEXS1010" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="visual" id="visual">
+          <div class="orbit-container" id="orbit"></div>
+          <div class="avatar" id="mainAvatar">
+            <!-- replace with real picture if wanted -->
+            <img src="img/avatar .png" alt="avatar" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- sosial media akhir -->
+
+    <!-- id card mulai -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <!-- Kartu Interaktif -->
+        <div class="card" id="flipCard">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="img/panitia 1.png" alt="Avatar" />
+            </div>
+            <div class="card-back">
+              <img src="img/2.png" alt="Info tambahan" />
+            </div>
+          </div>
+        </div>
+        <!-- Id card akhir -->
+
+        <!-- Tentang saya mulai -->
+        <div class="about-text">
+          <h2>Tentang <span>Saya</span></h2>
+          <p>
+            Halo! Saya Aswa/Hexs, seorang pelajar yang menyukai hal-hal
+            teknologi.
+          </p>
+          <p>
+            Passion saya adalah menggabungkan estetika dan fungsionalitas,
+            sehingga setiap karya yang saya buat tidak hanya indah tetapi juga
+            berguna.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- tentang saya akhir -->
+
+    <!-- story saya mulai -->
+    <section class="story-container" id="story">
+      <h1 class="story-title"><span>Story</span> Saya</h1>
+      <p class="story-desc">
+        Ini adalah perjalanan saya yang penuh pengalaman berharga dan
+        pembelajaran penting.
+      </p>
+
+      <div class="timeline">
+        <!-- ITEM 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Pertama kali tertarik coding dan Desain</h2>
+            <p>
+              Waktu SMP saya pertama kali mengenal coding, dimana saya tertarik
+              coding karena kakak saya kuliah IT juga jadi itu yang membuat saya
+              penasaran dunia koding
+            </p>
+          </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Mulai Belajar Coding</h2>
+            <p>
+              mulai mencari-cari tutorial di youtube, belajar sendiri dan
+              membuat projek awalnya memang berat tapi lama kelamaan saya paham
+              sedikit demi sedikit tentang tag di html, css, javascript tidak
+              terlalu.
+            </p>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Projek Pertama</h2>
+            <p>
+              Projek pertama saya adalah, membuat website makanan gitu namun
+              tidak selesai karena waktu itu bagi saya sangat susah dan waktu
+              itu cuma selesai di navbar aja hahaha.
+            </p>
+          </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Projek Kedua</h2>
+            <p>
+              Projek kedua saya adalah, membuat website sekolah ini berhasil
+              cuma yah masih tidak selesainya di bagian kontak dan footer aja
+              sih. Lalu saya ada tugas flowchart waktu itu dan itu pertama
+              kalinya saya mengenal python untuk memecahkan fungsi kuadrat
+              menggunakan coding.
+            </p>
+          </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Projek Serius</h2>
+            <p>
+              Projek serius disini adalah saya mengikuti lomba, yah memang ini
+              pertama kallinya saya ikut lomba yang dimana saya cukup kewalahan
+              karena biasanya saya coding pun cuma sekedar aja dalam artinya fun
+              aja gitu, tapi saya yah bisa melewati itu hingga sakit hahaha itu
+              hal yang seru tapi cukup melelahkan, dan untungnya menang sih.
+            </p>
+          </div>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2>Kedepannya</h2>
+            <p>
+              untuk kedepannya saya tetap mempelajari Front-End namun saya juga
+              tertarik di Cybersecurity, saya tau itu susah namun saya coba aja
+              dulu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- story saya akhir -->
+
+    <!-- gabungan mulai-->
+    <div class="tab-container" id="foto">
+      <div class="tab-menu">
+        <div class="tab-item active" data-tab="projects">
+          <i class="fa-solid fa-folder"></i>
+          <span>Project</span>
+        </div>
+
+        <div class="tab-item" data-tab="gallery">
+          <i class="fa-solid fa-image"></i>
+          <span>Achivement</span>
+        </div>
+
+        <div class="tab-item" data-tab="skills">
+          <i class="fa-solid fa-code"></i>
+          <span>Skill</span>
+        </div>
+      </div>
+
+      <!-- Project mulai -->
+      <div class="tab-content active" id="projects">
+        <div class="kartu">
+          <div class="border-rot" aria-hidden="true"></div>
+          <div class="image-wrap">
+            <img src="img/projek 1.jpeg" alt="..." />
+            <div class="hover-logo">
+              <img src="img/logo versi 2.png" alt="logo" />
+            </div>
+          </div>
+          <h3>Webside Sekolah</h3>
+          <p>
+            Sistem informasi sekolah berbasis web yang saya buat untuk latihan
+            projek.
+          </p>
+          <a
+            href="https://github.com/HEXS1010/web-sekolah/blob/main/index.html"
+            target="_blank"
+            class="btn"
+            >Ke GitHub →</a
+          >
+        </div>
+
+        <div class="kartu">
+          <div class="border-rot" aria-hidden="true"></div>
+          <div class="image-wrap">
+            <img src="img/projek 2.png" alt="..." />
+            <div class="hover-logo">
+              <img src="img/logo versi 2.png" alt="logo" />
+            </div>
+          </div>
+          <h3>Web belajar</h3>
+          <p>Lomba Desaign web tahun 2025, tim bit by bit</p>
+          <a href="https://github.com/HEXS1010/projek" class="btn"
+            >Ke GitHub →</a
+          >
+        </div>
+
+        <div class="kartu">
+          <div class="border-rot" aria-hidden="true"></div>
+          <div class="image-wrap">
+            <img src="img/projek 3.png" alt="..." />
+            <div class="hover-logo">
+              <img src="img/logo versi 2.png" alt="logo" />
+            </div>
+          </div>
+          <h3>Webside portofolio</h3>
+          <p>Ini adalah web portfolio saya yang pertama.</p>
+          <a
+            href="https://github.com/HEXS1010/portofolio-1"
+            target="_blank"
+            class="btn"
+            >Ke GitHub →</a
+          >
+        </div>
+
+        <div class="kartu">
+          <div class="border-rot" aria-hidden="true"></div>
+          <div class="image-wrap">
+            <img src="img/projek 4.png" alt="..." />
+            <div class="hover-logo">
+              <img src="img/logo versi 2.png" alt="logo" />
+            </div>
+          </div>
+          <h3>web portfolio 2</h3>
+          <p>Ini adalah web portfolio saya yang ke dua, update.</p>
+          <a href="#" class="btn">Ke GitHub →</a>
+        </div>
+      </div>
+      <!-- Project akhir -->
+
+      <!-- Achivement mulai -->
+      <div class="tab-content" id="gallery">
+        <div class="kartu">
+          <div class="image-wrap">
+            <img src="img/sertifikat AI.jpeg" alt="..." />
+            <div class="hover-logo">
+              <img src="img/logo versi 2.png" alt="logo" />
+            </div>
+          </div>
+          <h3>Modul Dasar AI</h3>
+          <p>
+            saya telah menyelesaikan modul pembelajaran AI di Dicoding, yang
+            berisi materi tentang konsep AI dasar, cara kerja model, dan
+            penerapannya di dunia nyata.
+          </p>
+        </div>
+
+        <div class="kartu">
+          <div class="image-wrap">
+            <img src="img/lomba web undiksha.jpeg" alt="..." />
+            <div class="hover-logo">
+              <img src="img/logo versi 2.png" alt="logo" />
+            </div>
+          </div>
+          <h3>Lomba Web Desaign UNDIKSHA</h3>
+          <p>
+            Penghargaan ini diberikan kepada saya dalam lomba Web Desaign
+            Nasional, di mana saya membuat web pembelajaran coding dengan tema
+            teknologi.
+          </p>
+        </div>
+      </div>
+      <!-- Achivement akhir -->
+
+      <!-- Skill mulai-->
+      <div class="tab-content" id="skills">
+        <div class="skill-kartu">
+          <img src="img/logo html.png" />
+          <p>HTML</p>
+        </div>
+
+        <div class="skill-kartu">
+          <img src="img/CSS.svg" />
+          <p>CSS</p>
+        </div>
+
+        <div class="skill-kartu">
+          <img src="img/js icon.jpeg" />
+          <p>JavaScript</p>
+        </div>
+
+        <div class="skill-kartu">
+          <img src="img/python.webp" />
+          <p>Python</p>
+        </div>
+      </div>
+    </div>
+    <!-- Skill akhir -->
+    <!-- gabungan akhir -->
+
+    <!-- komentar mulai -->
+    <div class="testimonial-header" id="komentar">
+      <h2 class="testimonial-title">Komentar <span>Anda</span></h2>
+      <p class="testimonial-desc">
+        Tinggalkan komentar, pesan, atau kesan Anda di bawah ini. Saran Anda
+        sangat berarti untuk saya kedepannya.
+      </p>
+    </div>
+
+    <div class="testimonial-container">
+      <div class="top-bar">
+        <h2>komentar</h2>
+        <div class="comment-actions">
+          <button class="add-btn" type="button">+ komentar</button>
+          <button class="admin-btn" id="adminBtn" type="button">Admin</button>
+          <button class="logout-btn" id="logoutBtn" type="button" hidden>Logout</button>
+        </div>
+      </div>
+
+      <!-- Tempat komentar -->
+      <div class="comment-list"></div>
+    </div>
+
+    <!-- POPUP FORM -->
+    <div class="popup-overlay">
+      <div class="popup-box">
+        <h3>komentar</h3>
+
+        <input type="text" id="nama" placeholder="Your Name" />
+        <small class="error" id="nama-error"></small>
+
+        <textarea id="komen" placeholder="Write something..."></textarea>
+        <small class="error" id="komen-error"></small>
+
+        <div class="popup-actions">
+          <button class="cancel-btn">batal</button>
+          <button class="send-btn">kirim</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGIN ADMIN -->
+    <div class="admin-overlay" id="adminOverlay">
+      <div class="admin-box">
+        <h3>Login Admin</h3>
+        <input
+          type="password"
+          id="adminPassword"
+          placeholder="Password admin"
+          autocomplete="current-password"
+        />
+        <small class="error" id="admin-error"></small>
+
+        <div class="admin-actions">
+          <button class="cancel-admin-btn" type="button">batal</button>
+          <button class="admin-login-btn" type="button">login</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTIF -->
+    <div class="notif success" id="notif">
+      <div class="checkmark">✔</div>
+      <p>Berhasil</p>
+      <div class="confetti-box"></div>
+    </div>
+
+    <!-- komentar akhir -->
+
+    <!-- footer mulai -->
+    <footer id="kontak">
+      <div class="grid-wrapper">
+        <div class="grid" id="grid"></div>
+      </div>
+
+      <div class="footer-container">
+        <!-- Left: Deskripsi -->
+        <div class="footer-col">
+          <div class="footer-logo-wrap">
+            <img src="img/logo versi 2.png" class="footer-logo" />
+            <h3>HEXS<span> PROJECT</span></h3>
+          </div>
+          <p>
+            Sebuah Nama yang terlahir dengan tidak sengaja yang dimana Hexs
+            sendiri adalah saya sendiri dan project artinya projek yang saya
+            kerjakan, jadi HEXS PROJECT adalah pekerjaan yang saya kerjakan
+            sendiri. <br />Dan apakah artinya HEXS PROJECT tidak bisa jadi tim
+            ?. Tentu bisa HEXS PROJECT hanya untuk menamakan pekerjaan saya/logo
+            namun juga bisa dijadikan tim untuk perkerjaan bersama.
+          </p>
+
+          <div class="footer-social">
+            <a class="tag" href="https://github.com/HEXS1010"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              class="tag"
+              href="https://www.instagram.com/swameda.k?igsh=aTB3bXNlMzk0dWVm"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a class="tag" href=""><i class="fab fa-whatsapp"></i></a>
+            <a
+              class="tag"
+              href="https://www.tiktok.com/@logar1230?_r=1&_t=ZS-91FZpOlKbKP"
+              ><i class="fa-brands fa-tiktok"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Middle: Links -->
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li>
+              <a href="#awal"><span>&rarr;</span> Home</a>
+            </li>
+            <li>
+              <a href="#about"><span>&rarr;</span> About me</a>
+            </li>
+            <li>
+              <a href="#story"><span>&rarr;</span> Story</a>
+            </li>
+            <li>
+              <a href="#foto"><span>&rarr;</span> Galeri</a>
+            </li>
+            <li>
+              <a href="#komentar"><span>&rarr;</span> Comment</a>
+            </li>
+            <li>
+              <a href="#kontak"><span>&rarr;</span> Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Kontak -->
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <p>📞 -----</p>
+          <p>✉️ aswameda18@gmail.com</p>
+          <p>📍 Gianyar, Bali</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy;</span> 2025 My
+        <span class="warna">Portfolio.</span> Desaigned By HEXS
+        <span class="warna">PROJECT.</span> <br />All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- footer akhir -->
+
+    <script type="module" src="js/footer.js"></script>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
