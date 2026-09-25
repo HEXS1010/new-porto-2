@@ -1053,7 +1053,7 @@ tabs.forEach((tab) => {
 
 //   // ================= LOAD KOMENTAR =================
 //   function loadComments() {
-//     fetch("/portofolio/backend/get_comments.php")
+//     fetch("backend/get_comments.php")
 //       .then((res) => res.json())
 //       .then((data) => {
 //         commentList.innerHTML = "";
@@ -1105,7 +1105,7 @@ tabs.forEach((tab) => {
 
 //     if (!valid) return;
 
-//     fetch("/portofolio/backend/save_comment.php", {
+//     fetch("backend/save_comment.php", {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -1205,7 +1205,7 @@ tabs.forEach((tab) => {
 //    * LOAD KOMENTAR
 //    ***********************/
 //   function loadComments() {
-//     fetch("/portofolio/backend/get_comments.php")
+//     fetch("backend/get_comments.php")
 //       .then((res) => res.json())
 //       .then((data) => {
 //         commentList.innerHTML = "";
@@ -1266,7 +1266,7 @@ tabs.forEach((tab) => {
 
 //     if (!valid) return;
 
-//     fetch("/portofolio/backend/save_comment.php", {
+//     fetch("backend/save_comment.php", {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -1303,7 +1303,7 @@ tabs.forEach((tab) => {
 
 //     if (!confirm("Yakin ingin menghapus komentar ini?")) return;
 
-//     fetch("/portofolio/backend/delete_comment.php", {
+//     fetch("backend/delete_comment.php", {
 //       method: "POST",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -1431,7 +1431,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function checkAdminStatus() {
     try {
-      const response = await fetch("/portofolio/backend/admin_status.php");
+      const response = await fetch("backend/admin_status.php");
       const data = await response.json();
       setAdminUi(data.authenticated === true);
       return data.authenticated === true;
@@ -1463,7 +1463,7 @@ document.addEventListener("DOMContentLoaded", () => {
     adminError.style.display = "none";
 
     try {
-      const response = await fetch("/portofolio/backend/admin_login.php", {
+      const response = await fetch("backend/admin_login.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
@@ -1489,7 +1489,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   logoutBtn.addEventListener("click", async () => {
     try {
-      await fetch("/portofolio/backend/admin_logout.php", { method: "POST" });
+      await fetch("backend/admin_logout.php", { method: "POST" });
     } finally {
       setAdminUi(false);
       await loadComments();
@@ -1500,7 +1500,7 @@ document.addEventListener("DOMContentLoaded", () => {
      LOAD KOMENTAR
   ====================== */
   function loadComments() {
-    fetch("/portofolio/backend/get_comments.php")
+    fetch("backend/get_comments.php")
       .then((res) => res.json())
       .then((data) => {
         commentList.innerHTML = "";
@@ -1564,7 +1564,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!valid) return;
 
-    fetch("/portofolio/backend/save_comment.php", {
+    fetch("backend/save_comment.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nama, komen }),
@@ -1595,7 +1595,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = e.target.dataset.id;
     if (!confirm("Yakin ingin menghapus komentar ini?")) return;
 
-    fetch("/portofolio/backend/delete_comment.php", {
+    fetch("backend/delete_comment.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: id }),
